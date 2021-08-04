@@ -2,7 +2,11 @@ import React from 'react';
 
 function App() {
   return (
-    <h1>Meu app react</h1>
+    <form>
+      <input type = "text" placeholder="Titulo"></input>
+      <textarea placeholder="Escreva sua nota..."></textarea>
+      <button>Criar Nota</button>
+    </form>
   );
 }
 
