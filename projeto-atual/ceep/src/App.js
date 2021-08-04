@@ -1,6 +1,7 @@
 import React from 'react';
+import { ListaDeNotas } from './components/listaDeNotas.jsx';
 
-function App() {// o App() deve devolver apenas um elemento. dessa forma, o form e o ul devem estar dentro de um container qualquer(devem estar encapsulados)
+function App() {// o App() deve devolver apenas um elemento. dessa forma, o form e o ul devem estar dentro de um container qualquer(devem estar encapsulados). o App é chamado de componente
   return (
     <section>
       <form>
@@ -8,16 +9,7 @@ function App() {// o App() deve devolver apenas um elemento. dessa forma, o form
         <textarea placeholder="Escreva sua nota..."></textarea>
         <button>Criar Nota</button>
       </form>
-      <ul>
-        <li>
-          <section>
-            <header>
-              <h3>Título</h3>
-            </header>
-            <p>Escreva sua nota</p>
-          </section>
-        </li>
-      </ul>
+      <ListaDeNotas></ListaDeNotas>
     </section>
   );
 }
