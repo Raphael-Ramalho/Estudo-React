@@ -1,14 +1,11 @@
 import React from 'react';
 import { ListaDeNotas } from './components/listaDeNotas.jsx';
+import {FormularioCadastro} from "./components/formularioCadastro"
 
 function App() {// o App() deve devolver apenas um elemento. dessa forma, o form e o ul devem estar dentro de um container qualquer(devem estar encapsulados). o ListaDeNotas é um componente
   return (
     <section>
-      <form>
-        <input type = "text" placeholder="Titulo"></input>
-        <textarea placeholder="Escreva sua nota..."></textarea>
-        <button>Criar Nota</button>
-      </form>
+      <FormularioCadastro></FormularioCadastro>
       <ListaDeNotas></ListaDeNotas>
     </section>
   );

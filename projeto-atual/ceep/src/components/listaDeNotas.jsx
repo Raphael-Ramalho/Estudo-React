@@ -1,35 +1,21 @@
 //os componentes do react são extensões .jsx
-import React, {Component} from "react"
+import React, { Component } from "react"
+import CardNota from "./cardNota.jsx"
 
 export class ListaDeNotas extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <ul>
                 <li>
-                <section>
-                    <header>
-                    <h3>Título</h3>
-                    </header>
-                    <p>Escreva sua nota</p>
-                </section>
+                    <CardNota />
                 </li>
                 <li>
-                <section>
-                    <header>
-                    <h3>Título</h3>
-                    </header>
-                    <p>Escreva sua nota</p>
-                </section>
+                    <CardNota />
                 </li>
                 <li>
-                <section>
-                    <header>
-                    <h3>Título</h3>
-                    </header>
-                    <p>Escreva sua nota</p>
-                </section>
+                    <CardNota />
                 </li>
             </ul>)
     }
-    
+
 }
