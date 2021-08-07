@@ -9,7 +9,6 @@ class ListaDeNotas extends Component {
                 {Array.of("Trabalho", "Trabalho", "Estudo").map((categoria, index) => {
                     return (
                         <li key = {index}>
-                            {console.log(index)}
                             <div>{categoria}</div>
                             <CardNota />
                         </li>
