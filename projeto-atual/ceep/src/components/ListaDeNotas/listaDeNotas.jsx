@@ -1,6 +1,6 @@
 //os componentes do react são extensões .jsx
 import React, { Component } from "react"
-import CardNota from "../CardNota/cardNota.jsx"
+import CardNota from "../CardNota"
 import "./estilo.css"
 
 class ListaDeNotas extends Component {
