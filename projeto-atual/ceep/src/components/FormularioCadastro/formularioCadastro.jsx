@@ -2,6 +2,14 @@ import React, { Component } from "react"
 import "./estilo.css"
 
 class FormularioCadastro extends Component {
+
+    constructor(){
+        this.titulo="";
+    }
+    handleMudancaTitulo(evento){
+        this.titulo = console.log(evento.target.value)
+    }
+
     render() {
         return (
             <form className="form-cadastro">
@@ -9,6 +17,7 @@ class FormularioCadastro extends Component {
                     type="text" 
                     placeholder="Titulo"
                     className="form-cadastro_input"
+                    onChange={this.handleMudancaTitulo} //O evento onChange é ativado quando o valor do input é alterado. O this é usado porque ele faz referência a uma propriedade do próprio objeto
                 />
                 <textarea 
                     rows={15}
