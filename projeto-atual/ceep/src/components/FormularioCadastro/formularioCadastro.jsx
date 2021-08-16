@@ -4,6 +4,7 @@ import "./estilo.css"
 class FormularioCadastro extends Component {
 
     constructor(){
+        super();//sempre q uma classe for extendida a partir de outra, o construtor da classe nova precisa conter o super() para puxar o contrutor da classe original.
         this.titulo="";
     }
     handleMudancaTitulo(evento){
