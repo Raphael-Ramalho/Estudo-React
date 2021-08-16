@@ -8,7 +8,8 @@ class FormularioCadastro extends Component {
         this.titulo="";
     }
     handleMudancaTitulo(evento){
-        this.titulo = console.log(evento.target.value)
+        this.titulo = evento.target.value
+        console.log(this.titulo)
     }
 
     render() {
