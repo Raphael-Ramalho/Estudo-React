@@ -12,7 +12,7 @@ class FormularioCadastro extends Component {
         console.log(this.titulo)
     }
 
-    render() {//teste
+    render() {
         return (
             <form className="form-cadastro">
                 <input 
