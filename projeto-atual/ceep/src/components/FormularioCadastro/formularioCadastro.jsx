@@ -19,7 +19,10 @@ class FormularioCadastro extends Component {
                     type="text" 
                     placeholder="Titulo"
                     className="form-cadastro_input"
-                    onChange={this.handleMudancaTitulo.bind(this)} //O evento onChange é ativado quando o valor do input é alterado. O this é usado porque ele faz referência a uma propriedade do próprio objeto
+                    onChange={this.handleMudancaTitulo}
+                    //onChange={this.handleMudancaTitulo.bind(this)}
+
+                     //O evento onChange é ativado quando o valor do input é alterado. O this é usado porque ele faz referência a uma propriedade do próprio objeto
                 />
                 <textarea 
                     rows={15}
@@ -35,3 +38,5 @@ class FormularioCadastro extends Component {
 }
 
 export default FormularioCadastro;
+
+
