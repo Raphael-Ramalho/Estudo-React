@@ -11,7 +11,7 @@ class App extends Component {// o App() deve devolver apenas um elemento. dessa 
   render() {
     return (
       <section className="conteudo">
-        <FormularioCadastro driarNota = {this.criarNota}/>
+        <FormularioCadastro criarNota = {this.criarNota}/>
         <ListaDeNotas/>
       </section>
     );
