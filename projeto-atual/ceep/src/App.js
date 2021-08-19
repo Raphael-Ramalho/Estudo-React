@@ -6,18 +6,19 @@ import './assets/index.css';
 
 class App extends Component {// o App() deve devolver apenas um elemento. dessa forma, o form e o ul devem estar dentro de um container qualquer(devem estar encapsulados). o ListaDeNotas é um componente
   constructor(){
-    super()
-    this.notas =[]
+    super();
+    this.notas = [];
   }
   
-  criarNota(titulo, texto){//teste
+  criarNota(titulo, texto){
     const novaNota = {titulo, texto}
     this.notas.push(novaNota)
+    console.log("notas", this.notas)
   }
   render() {
     return (
       <section className="conteudo">
-        <FormularioCadastro criarNota = {this.criarNota}/>
+        <FormularioCadastro criarNota = {this.criarNota.bind(this)}/>
         <ListaDeNotas notas = {this.notas}/>
       </section>
     );
