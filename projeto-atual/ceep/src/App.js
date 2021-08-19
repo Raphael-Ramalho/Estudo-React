@@ -10,7 +10,7 @@ class App extends Component {// o App() deve devolver apenas um elemento. dessa 
     this.notas =[]
   }
   
-  criarNota(titulo, texto){
+  criarNota(titulo, texto){//teste
     const novaNota = {titulo, texto}
     this.notas.push(novaNota)
   }
