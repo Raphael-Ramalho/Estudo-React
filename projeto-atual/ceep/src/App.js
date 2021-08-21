@@ -21,11 +21,21 @@ class App extends Component {// o App() deve devolver apenas um elemento. dessa 
     this.setState(novoEstado) //o estado é alterado com o metodo setState e como parâmetro, devemos passar o novo estado do componente
   }
 
+  deletarNota(index){
+    let arrayNotas = this.state.notas
+    arrayNotas.splice(index,1)
+    console.log("index: ",index)
+    this.setState({notas:arrayNotas})
+  }
+
   render() {
     return (
       <section className="conteudo">
         <FormularioCadastro criarNota = {this.criarNota.bind(this)}/>
-        <ListaDeNotas notas = {this.state.notas}/>
+        <ListaDeNotas 
+          apagarNota = {this.deletarNota.bind(this)}
+          notas = {this.state.notas}
+        />
       </section>
     );
   }
