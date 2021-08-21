@@ -6,8 +6,9 @@ import './assets/index.css';
 
 class App extends Component {// o App() deve devolver apenas um elemento. dessa forma, o form e o ul devem estar dentro de um container qualquer(devem estar encapsulados). o ListaDeNotas é um componente
   constructor(){
-    super();
-    this.notas = [];
+    super()
+    this.notas = []
+    this.state ={} 
   }
   
   criarNota(titulo, texto){
