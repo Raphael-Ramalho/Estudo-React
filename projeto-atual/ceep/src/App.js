@@ -23,6 +23,7 @@ class App extends Component {// o App() deve devolver apenas um elemento. dessa 
 
   deletarNota(index){
     let arrayNotas = this.state.notas
+    console.log("arrayNotas: ", arrayNotas)
     arrayNotas.splice(index,1)
     console.log("index: ",index)
     this.setState({notas:arrayNotas})
