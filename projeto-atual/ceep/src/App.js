@@ -6,9 +6,9 @@ import "./assets/App.css"
 import './assets/index.css';
 
 class App extends Component {// o App() deve devolver apenas um elemento. dessa forma, o form e o ul devem estar dentro de um container qualquer(devem estar encapsulados). o ListaDeNotas é um componente
-  constructor() {//o state é uma funcionalidade basica do react assim como o props. Ele é responsavel por atualizar a visualização dos componentes. Nós desenvolvedores não podemos chamar o metodo render a qualquer momento, mas o react o chama sempre que o state de allgum componente é alterado. Normalmente usamos o state como um objeto {} pq podemos adicionar e remover coisas facilmente 
+  constructor() {
     super()
-    this.state = {
+    this.state = {//o state é uma funcionalidade basica do react assim como o props. Ele é responsavel por atualizar a visualização dos componentes. Nós desenvolvedores não podemos chamar o metodo render a qualquer momento, mas o react o chama sempre que o state de algum componente é alterado. Normalmente usamos o state como um objeto {} pq podemos adicionar e remover coisas facilmente 
       notas: [],
       categorias: []
     } 
