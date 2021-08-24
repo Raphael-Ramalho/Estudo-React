@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import "./estilo.css"
 
+
+
 class FormularioCadastro extends Component {
 
     constructor(props){
@@ -22,7 +24,7 @@ class FormularioCadastro extends Component {
         this.props.criarNota(this.titulo, this.texto)
     }
 
-    teste = (props) => {console.log(this.props.categorias)}
+    
 
     render() {
         return (
@@ -31,7 +33,9 @@ class FormularioCadastro extends Component {
                 onSubmit={this._criarNota.bind(this)}
                 >
                 <select className="form-cadastro_input" id="">
-                
+                    {this.props.categorias.map((categoria)=>{
+                        return <option>{categoria}</option>
+                    })}
                 </select>
                 <input 
                     type="text" 
