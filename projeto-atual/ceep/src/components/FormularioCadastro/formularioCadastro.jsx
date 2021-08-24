@@ -22,11 +22,17 @@ class FormularioCadastro extends Component {
         this.props.criarNota(this.titulo, this.texto)
     }
 
+    teste = (props) => {console.log(this.props.categorias)}
+
     render() {
         return (
             <form 
                 className="form-cadastro"
-                onSubmit={this._criarNota.bind(this)}>
+                onSubmit={this._criarNota.bind(this)}
+                >
+                <select className="form-cadastro_input" id="">
+                
+                </select>
                 <input 
                     type="text" 
                     placeholder="Titulo"
