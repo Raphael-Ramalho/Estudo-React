@@ -9,6 +9,7 @@ class FormularioCadastro extends Component {
         super(props);//sempre q uma classe for extendida a partir de outra, o construtor da classe nova precisa conter o super() para puxar o contrutor da classe original.
         this.titulo="";
         this.texto="";
+        this.categoria = "Sem Categoria"
     }
     _handleMudancaTitulo(evento){
         this.titulo = evento.target.value
@@ -21,7 +22,7 @@ class FormularioCadastro extends Component {
     _criarNota(evento){
         evento.preventDefault()
         evento.stopPropagation()
-        this.props.criarNota(this.titulo, this.texto)
+        this.props.criarNota(this.titulo, this.texto, this.categoria)
     }
 
     
