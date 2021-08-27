@@ -10,7 +10,7 @@ class App extends Component {// o App() deve devolver apenas um elemento. dessa 
     super()
     this.state = {//o state é uma funcionalidade basica do react assim como o props. Ele é responsavel por atualizar a visualização dos componentes. Nós desenvolvedores não podemos chamar o metodo render a qualquer momento, mas o react o chama sempre que o state de algum componente é alterado. Normalmente usamos o state como um objeto {} pq podemos adicionar e remover coisas facilmente 
       notas: [],
-      categorias: []
+      categorias: ['Games', 'Musica']
     } 
   }
 
