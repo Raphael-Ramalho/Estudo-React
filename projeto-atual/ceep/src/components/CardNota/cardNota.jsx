@@ -6,7 +6,7 @@ class CardNota extends Component {
 
     apagar(){
         const indice = this.props.indice
-        this.props.apagarNota(indice)
+        this.props.apagarNota(indice) //Esse apagarNota é na verdade o deletar nota do arquivo App.js. Seu nome está diferete porque no App.js, ele foi passado por props com outro nome (apagarNota, que foi repetido no arquivo listaDeNotas)
     }
 
     render() {
