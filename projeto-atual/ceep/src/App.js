@@ -25,7 +25,7 @@ class App extends Component {// o App() deve devolver apenas um elemento. dessa 
         <main className="conteudo-principal">
           <ListaDeCategorias 
             adicionarCategoria = {this.categorias.adicionarCategoria}
-            categorias = {this.categorias.categorias}
+            categorias = {this.categorias}
           />
           <ListaDeNotas
             apagarNota={this.notas.apagarNota}
