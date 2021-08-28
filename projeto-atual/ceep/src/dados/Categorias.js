@@ -12,7 +12,7 @@ export default class Categorias{
         this._inscritos.forEach(func => func(this.categorias))
     }
 
-    adicionarcategoria(novaCategoria){
+    adicionarCategoria(novaCategoria){
         this.categorias.push(novaCategoria)
     }
 }

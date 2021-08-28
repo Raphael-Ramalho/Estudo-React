@@ -24,7 +24,7 @@ class App extends Component {// o App() deve devolver apenas um elemento. dessa 
         />
         <main className="conteudo-principal">
           <ListaDeCategorias 
-            adicionarCategoria = {this.categorias.adicionarCategoria}
+            adicionarCategoria = {this.categorias.adicionarCategoria.bind(this.categorias)}
             categorias = {this.categorias}
           />
           <ListaDeNotas
