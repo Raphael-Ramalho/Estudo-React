@@ -8,7 +8,7 @@ import Categorias from './dados/Categorias';
 import ArrayDeNotas from './dados/Notas';
 
 class App extends Component {// o App() deve devolver apenas um elemento. dessa forma, o form e o ul devem estar dentro de um container qualquer(devem estar encapsulados). o ListaDeNotas é um componente
-  constructor(){
+  constructor(){ 
     super()
     this.categorias = new Categorias();
     this.notas = new ArrayDeNotas()
