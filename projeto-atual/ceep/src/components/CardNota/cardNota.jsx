@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./estilo.css"
-import {ReactComponent as DeleteSVG} from "../../assets/img/delete.svg"
+import {ReactComponent as DeleteSVG} from "../../assets/img/delete.svg" // o D do DeleteSVG precisa ser maiúsculo
 
 class CardNota extends Component {
 
