@@ -19,7 +19,7 @@ class App extends Component {// o App() deve devolver apenas um elemento. dessa 
     return (
       <section className="conteudo">
         <FormularioCadastro 
-          categorias ={this.categorias.categorias}
+          categorias ={this.categorias}
           criarNota={this.notas.criarNota} 
         />
         <main className="conteudo-principal">
