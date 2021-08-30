@@ -20,7 +20,7 @@ class App extends Component {// o App() deve devolver apenas um elemento. dessa 
       <section className="conteudo">
         <FormularioCadastro 
           categorias ={this.categorias}
-          criarNota={this.notas.criarNota} 
+          criarNota={this.notas.adicionarNota.bind(this.notas)} //esse .bind(this.notas) faz referência ao this.notas do contrutor do arquivo Notas.js
         />
         <main className="conteudo-principal">
           <ListaDeCategorias 
@@ -28,8 +28,8 @@ class App extends Component {// o App() deve devolver apenas um elemento. dessa 
             categorias = {this.categorias}
           />
           <ListaDeNotas
-            apagarNota={this.notas.apagarNota}
-            notas={this.notas.notas}
+            apagarNota={this.notas.apagarNota.bind(this.notas)}
+            notas={this.notas}
           />
         </main>
       </section>
