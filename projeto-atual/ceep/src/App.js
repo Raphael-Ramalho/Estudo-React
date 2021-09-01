@@ -14,7 +14,7 @@ class App extends Component {// o App() deve devolver apenas um elemento. dessa 
     this.notas = new ArrayDeNotas()
   }
 
-
+  componentDidMount(){}
   render() {
     return (
       <section className="conteudo">
