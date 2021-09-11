@@ -4,11 +4,11 @@ import { Button, TextField } from "@material-ui/core"
 function FormularioCadastro(){
     return(
         <form>
-            <TextField id="nome" label="Nome" variant="outlined"/>
+            <TextField id="nome" label="Nome" color="secondary" variant='outlined' fullWidth margin="normal"/>
             
-            <TextField id="sobrenome" label="Sobrenome" variant="outlined"/>
+            <TextField id="sobrenome" label="Sobrenome" color="secondary" variant='outlined' fullWidth margin="normal"/>
 
-            <TextField id="cpf" label="CPF" variant="outlined"/>
+            <TextField id="cpf" label="CPF" color="secondary" variant='outlined' fullWidth margin="normal"/>
 
             <label>Promoções</label>
             <input type="checkbox" />
