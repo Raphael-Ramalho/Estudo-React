@@ -1,24 +1,48 @@
 import React from 'react';
-import { Button, TextField } from "@material-ui/core"
+import { Button, TextField, Switch, FormControlLabel } from "@material-ui/core"
 
-function FormularioCadastro(){
-    return(
-        <form>
-            <TextField id="nome" label="Nome" color="secondary" variant='outlined' fullWidth margin="normal"/>
-            
-            <TextField id="sobrenome" label="Sobrenome" color="secondary" variant='outlined' fullWidth margin="normal"/>
+function FormularioCadastro() {
+  let nome =""
+  
+  return (
+    <form>
+      <TextField
+        onChange={event =>{console.log(event.target)}}
+        id="nome"
+        label="Nome"
+        color="secondary"
+        variant='outlined'
+        fullWidth
+        margin="normal"
+      />
+      <TextField
+        id="sobrenome"
+        label="Sobrenome"
+        color="secondary"
+        variant='outlined'
+        fullWidth
+        margin="normal"
+      />
+      <TextField
+        id="cpf"
+        label="CPF"
+        color="secondary"
+        variant='outlined'
+        fullWidth
+        margin="normal" />
+      <FormControlLabel
+        label="Promoções"
+        control={<Switch name="promocoes" defaultChecked color="primary" />}
+      />
 
-            <TextField id="cpf" label="CPF" color="secondary" variant='outlined' fullWidth margin="normal"/>
+      <FormControlLabel 
+        label="Novidades" 
+        control={<Switch name="novidades" defaultChecked color="primary" />} 
+      />
 
-            <label>Promoções</label>
-            <input type="checkbox" />
-        
-            <label>Novidades</label>
-            <input type="checkbox" />
-
-            <Button type='submit' variant="contained" color="primary">Cadastrar</Button>
-        </form>
-    );
+      <Button type='submit' variant="contained" color="primary">Cadastrar</Button>
+    </form>
+  );
 }
 
 export default FormularioCadastro;
