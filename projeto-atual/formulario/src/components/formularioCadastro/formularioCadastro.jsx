@@ -14,8 +14,7 @@ function FormularioCadastro({aoEnviar}) {
       onSubmit={(event) => {
         event.preventDefault()
         aoEnviar({nome, sobrenome, cpf, novidades, promocoes})
-      }
-      }>
+      }}>
       <TextField
         value={nome}
         onChange={event => {
