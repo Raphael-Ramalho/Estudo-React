@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Button, TextField, Switch, FormControlLabel } from "@material-ui/core"
 
-function FormularioCadastro({aoEnviar}) {
+function FormularioCadastro({aoEnviar, validarCPF}) {
   const [nome, setNome] = useState("");//O use State devolve uma variável para referenciar qual o estado que está dentro do componente
   const [sobrenome, setSobrenome] = useState("")
   const [cpf, setCpf] = useState("")
   const [promocoes, setPromocoes] = useState(true)
   const [novidades, setNovidades] = useState(true)
-
+  const [erros, setErros] = useState({cpf:{valido:true, texto:""}})
 
   return (
     <form
@@ -22,7 +22,7 @@ function FormularioCadastro({aoEnviar}) {
         }}
         id="nome"
         label="Nome"
-        color="secondary"
+        color='primary'
         variant='outlined'
         fullWidth
         margin="normal"
@@ -34,7 +34,7 @@ function FormularioCadastro({aoEnviar}) {
         }}
         id="sobrenome"
         label="Sobrenome"
-        color="secondary"
+        color='primary'
         variant='outlined'
         fullWidth
         margin="normal"
@@ -44,9 +44,15 @@ function FormularioCadastro({aoEnviar}) {
         onChange={event => {
           setCpf(event.target.value)
         }}
+        onBlur={(event)=>{
+          const ehValido = validarCPF(event.target.value)
+          setErros({cpf:ehValido})
+        }}
+        error ={!erros.cpf.valido}
+        helperText={erros.cpf.texto} // mensagem de erro
         id="cpf"
         label="CPF"
-        color="secondary"
+        color='primary'
         variant='outlined'
         fullWidth
         margin="normal" />
