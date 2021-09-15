@@ -18,7 +18,7 @@ class ListaDeCategorias extends Component {
   }
 
   _novasCategorias(categorias){
-    this.setState({...this.state, categorias})// apenas colocar (categorias) não funciona
+    this.setState({...this.state, categorias})// apenas colocar (categorias) não funciona...
   }
 
   _handlerEventoInput(e){
