@@ -1,77 +1,26 @@
+import { Typography } from '@material-ui/core';
 import React, { useState } from 'react';
-import { Button, TextField, Switch, FormControlLabel } from "@material-ui/core"
+import DadosEntrega from './DadosEntrega';
+import DadosPessoais from './DadosPessoais';
+import DadosUsuario from './DadosUsuario';
 
-function FormularioCadastro({aoEnviar, validarCPF}) {
-  const [nome, setNome] = useState("");//O use State devolve uma variável para referenciar qual o estado que está dentro do componente
-  const [sobrenome, setSobrenome] = useState("")
-  const [cpf, setCpf] = useState("")
-  const [promocoes, setPromocoes] = useState(true)
-  const [novidades, setNovidades] = useState(true)
-  const [erros, setErros] = useState({cpf:{valido:true, texto:""}})
+function FormularioCadastro({ aoEnviar, validarCPF }) {
+  const [etapaAtual, setEtapaAtual] = useState(0)
+
+  const formularios = [
+    <DadosUsuario aoEnviar={proximo} />,
+    <DadosPessoais aoEnviar={proximo} validarCPF={validarCPF} />,
+    <DadosEntrega aoEnviar={aoEnviar} />
+  ]
+
+  function proximo() {
+    setEtapaAtual(etapaAtual + 1)
+  }
 
   return (
-    <form
-      onSubmit={(event) => {
-        event.preventDefault()
-        aoEnviar({nome, sobrenome, cpf, novidades, promocoes})
-      }}>
-      <TextField
-        value={nome}
-        onChange={event => {
-          setNome(event.target.value)
-        }}
-        id="nome"
-        label="Nome"
-        color='primary'
-        variant='outlined'
-        fullWidth
-        margin="normal"
-      />
-      <TextField
-        value={sobrenome}
-        onChange={event => {
-          setSobrenome(event.target.value)
-        }}
-        id="sobrenome"
-        label="Sobrenome"
-        color='primary'
-        variant='outlined'
-        fullWidth
-        margin="normal"
-      />
-      <TextField
-        value={cpf}
-        onChange={event => {
-          setCpf(event.target.value)
-        }}
-        onBlur={(event)=>{
-          const ehValido = validarCPF(event.target.value)
-          setErros({cpf:ehValido})
-        }}
-        error ={!erros.cpf.valido}
-        helperText={erros.cpf.texto} // mensagem de erro
-        id="cpf"
-        label="CPF"
-        color='primary'
-        variant='outlined'
-        fullWidth
-        margin="normal" />
-      <FormControlLabel
-        label="Promoções"
-        control={<Switch checked={promocoes} onChange={event=>{
-          setPromocoes(event.target.checked)
-        }} name="promocoes" color="primary" />}
-      />
-
-      <FormControlLabel
-        label="Novidades"
-        control={<Switch checked={novidades} onChange = {event => {
-          setNovidades(event.target.checked)
-        }} name="novidades" color="primary" />}
-      />
-
-      <Button type='submit' variant="contained" color="primary">Cadastrar</Button>
-    </form>
+    <>
+      {formularios[etapaAtual]}
+    </>
   );
 }
 
