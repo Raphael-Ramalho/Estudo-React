@@ -1,35 +1,47 @@
-import { Button, TextField } from '@material-ui/core';
-import React from 'react';
+import { Button, TextField } from "@material-ui/core";
+import React, { useState } from "react";
 
-function DadosUsuario({aoEnviar}) {
+function DadosUsuario({ aoEnviar }) {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
   return (
-    <form onSubmit={(event) => {
-      event.preventDefault()
-      aoEnviar()
-    }}>
-      <TextField 
-        id="email" 
-        label="email" 
-        type="email" 
-        variant='outlined'
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        aoEnviar();
+      }}
+    >
+      <TextField
+        value={email}
+        onChange={(event) => {
+          setEmail(event.target.value);
+        }}
+        id="email"
+        label="email"
+        type="email"
+        variant="outlined"
         fullWidth
         required
-        margin="normal" 
+        margin="normal"
       />
-      <TextField 
-        id="senha" 
-        label="senha" 
-        type="password" 
-        variant='outlined'
+      <TextField
+        value={senha}
+        onChange={(event) => {
+          setSenha(event.target.value);
+        }}
+        id="senha"
+        label="senha"
+        type="password"
+        variant="outlined"
         fullWidth
         required
-        margin="normal" 
+        margin="normal"
       />
       <Button type="submit" variant="contained" color="primary">
         Cadastrar
       </Button>
     </form>
-  )
+  );
 }
 
-export default DadosUsuario
+export default DadosUsuario;
