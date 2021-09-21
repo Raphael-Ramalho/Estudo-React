@@ -11,7 +11,7 @@ function DadosUsuario({ aoEnviar, validacoes }) {
     const {name, value} = event.target
     const novoEstado = {...erros}
     novoEstado[name] = validacoes[name](value);
-    setErros({novoEstado});
+    setErros(novoEstado);
   }
 
   return (
@@ -40,6 +40,7 @@ function DadosUsuario({ aoEnviar, validacoes }) {
           setSenha(event.target.value);
         }}
         onBlur={validarCampos}
+        {...console.log(erros)}
         error={!erros.senha.valido}
         helperText={erros.senha.texto}
         id="senha"
