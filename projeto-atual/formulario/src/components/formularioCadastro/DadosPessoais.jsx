@@ -29,6 +29,7 @@ function DadosPessoais({ aoEnviar, validarCPF }) {
           setNome(event.target.value);
         }}
         id="nome"
+        name="nome"
         label="Nome"
         color="primary"
         variant="outlined"
@@ -41,6 +42,7 @@ function DadosPessoais({ aoEnviar, validarCPF }) {
           setSobrenome(event.target.value);
         }}
         id="sobrenome"
+        name="sobrenome"
         label="Sobrenome"
         color="primary"
         variant="outlined"
