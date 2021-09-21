@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, TextField, Switch, FormControlLabel } from "@material-ui/core";
 
-function DadosPessoais({ aoEnviar, validarCPF }) {
+function DadosPessoais({ aoEnviar, validacoes }) {
   const [nome, setNome] = useState(""); //O use State devolve uma variável para referenciar qual o estado que está dentro do componente
   const [sobrenome, setSobrenome] = useState("");
   const [cpf, setCpf] = useState("");
@@ -12,7 +12,7 @@ function DadosPessoais({ aoEnviar, validarCPF }) {
   function validarCampos(event) {
     const {name, value} = event.target
     const novoEstado = {...erros}
-    novoEstado[name] = validarCPF[name](value);
+    novoEstado[name] = validacoes[name](value);
     setErros({novoEstado});
   }
 

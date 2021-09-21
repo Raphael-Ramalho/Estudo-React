@@ -1,9 +1,19 @@
 import { Button, TextField } from "@material-ui/core";
 import React, { useState } from "react";
 
-function DadosUsuario({ aoEnviar }) {
+function DadosUsuario({ aoEnviar, validacoes }) {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+
+  const [erros, setErros] = useState({ cpf: { valido: true, texto: "" } });
+
+  function validarCampos(event) {
+    const {name, value} = event.target
+    const novoEstado = {...erros}
+    novoEstado[name] = validacoes[name](value);
+    setErros({novoEstado});
+  }
+
   return (
     <form
       onSubmit={(event) => {
