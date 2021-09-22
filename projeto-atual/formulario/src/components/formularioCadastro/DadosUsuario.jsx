@@ -14,11 +14,22 @@ function DadosUsuario({ aoEnviar, validacoes }) {
     setErros(novoEstado);
   }
 
+  function possoEnviar(){
+    for(let campo in erros){
+      if(!erros[campo].valido){
+        return false
+      }
+    }
+    return true
+  }
+
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        aoEnviar({email, senha});
+        if(possoEnviar()){
+          aoEnviar({email, senha});
+        }
       }}
     >
       <TextField
@@ -40,7 +51,6 @@ function DadosUsuario({ aoEnviar, validacoes }) {
           setSenha(event.target.value);
         }}
         onBlur={validarCampos}
-        {...console.log(erros)}
         error={!erros.senha.valido}
         helperText={erros.senha.texto}
         id="senha"
