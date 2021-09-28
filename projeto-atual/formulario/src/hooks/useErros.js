@@ -24,8 +24,6 @@ function useErros(validacoes) {
   return [erros, validarCampos, possoEnviar]
 }
 
-
-
 function criarEstadoInicial(validacoes) {
   const estadoInicial = {}
   for (let campo in validacoes) {
