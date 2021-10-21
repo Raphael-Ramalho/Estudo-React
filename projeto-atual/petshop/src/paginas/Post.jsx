@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
+import {busca} from '../api/api'
 
 const Post = () => {
     const [post, setPost] = useState({}) 
 
     useEffect(()=>{
         busca(`/posts/${id}`, setPost)
-    },[input])
+    },[id])
 
     return(
 
