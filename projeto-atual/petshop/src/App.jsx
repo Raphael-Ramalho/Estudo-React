@@ -11,7 +11,7 @@ import Post from './paginas/Post'
 function App() {
   return (
     <BrowserRouter>
-      <Cabecalho/>
+      <Cabecalho />
       <Switch>
         <Route exact path='/'>
           <Home />
@@ -23,7 +23,7 @@ function App() {
           <Post/>
         </Route>
         <Route>
-          <Pagina404/>
+          <Pagina404 />
         </Route>
       </Switch>
     </BrowserRouter>
