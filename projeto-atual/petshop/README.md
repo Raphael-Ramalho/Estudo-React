@@ -1,3 +1,11 @@
+
+
+
+IMPORTANTE!!!!
+Para rodar a aplicação, é necessário executar o comando 'npx json-server --watch db.json --port 5000' na pasta petshop
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
