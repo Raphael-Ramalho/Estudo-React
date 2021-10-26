@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
-import api, { busca } from '../api/api'
+import { busca } from '../api/api'
 import '../assets/css/blog.css'
 
 const ListaCategorias = () =>{
