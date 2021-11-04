@@ -9,7 +9,7 @@ const ListaCategorias = () =>{
     useEffect(()=>{
         busca(`/categorias`, setCategorias)
     },[])
-    console.log(categorias)
+
     return(
         <ul className="lista-categorias container flex">
             {categorias.map((categoria, index)=>(
