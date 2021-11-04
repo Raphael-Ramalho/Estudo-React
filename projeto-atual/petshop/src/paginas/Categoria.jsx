@@ -7,6 +7,7 @@ import { Route, useRouteMatch, useParams } from 'react-router-dom'
 const Categoria = () => {
     const { id } = useParams()
     const { path } = useRouteMatch()
+    
     return (
         <>
             <div className="container">
@@ -14,7 +15,7 @@ const Categoria = () => {
             </div>
             <ListaCategorias />
             <Route exact path={`${path}/`}>
-                <ListaPost url={`/posts/?categoria=${id}`} />
+                <ListaPost url={`/posts?categoria=${id}`} />
             </Route>
         </>
     )

@@ -11,8 +11,6 @@ const ListaPost = ({ url }) => {
         busca(url, setPosts) // cada post possui uma categoria atribuida à ele
     }, [url])
 
-    console.log(posts)
-
     return (
         <section className="posts container">
             {
