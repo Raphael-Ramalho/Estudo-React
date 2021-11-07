@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import ListaCategorias from '../components/ListaCategorias'
 import '../assets/css/blog.css'
 import ListaPost from '../components/ListaPost'
-import { Route, useRouteMatch, useParams, Link } from 'react-router-dom'
+import { Route, useRouteMatch, useParams, Link, Switch } from 'react-router-dom'
 import { busca } from '../api/api'
+import SubCategorias from './SubCategorias'
 
 const Categoria = () => {
     const { id } = useParams()
@@ -12,7 +13,7 @@ const Categoria = () => {
 
     useEffect(() => {
         busca(`/categorias/${id}`, (categoria) => {
-            setSubCategorias(categoria.subCategorias)
+            setSubCategorias(categoria.subcategorias)
         })
     }, [id])
 
@@ -31,12 +32,16 @@ const Categoria = () => {
                             </Link>
                         </li>
                     ))
-
                 }
             </ul>
-            <Route exact path={`${path}/`}>
-                <ListaPost url={`/posts?categoria=${id}`} />
-            </Route>
+            <Switch>
+                <Route path={`${path}/:subcategoria`}>
+                    <SubCategorias />
+                </Route>
+                <Route exact path={`${path}/`}>
+                    <ListaPost url={`/posts?categoria=${id}`} />
+                </Route>
+            </Switch>
         </>
     )
 }
