@@ -1,0 +1,1 @@
+Utilizar o comando  "npm install --save styled-components" na primeira vez q for rodar o código em outro computador
