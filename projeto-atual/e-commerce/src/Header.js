@@ -1,13 +1,33 @@
-import React from 'react';
-import './Header.css'
-import Logo from "./assets/img/amazon-logo.JPG"
+import React from "react";
+import "./Header.css";
+import Logo from "./assets/img/amazon-logo.JPG";
 
-function Header () {
-  return(
-    <div>
-      <img src={Logo} alt="Amazon logo"/> 
+function Header() {
+  return (
+    <div className="header">
+      <img className="header__logo" src={Logo} alt="Amazon logo" />
+
+      <div className="header__search">
+        <input className="header__searchInput" type="text" />
+      </div>
+
+      <div className="header__nav">
+        <div className="header__option">
+          <span className="header__optionLineOne">HelloGuest</span>
+          <span className="header__optionLineTwo">SignInt</span>
+        </div>
+        <div className="header__option">
+          <span className="header__optionLineOne">Returns</span>
+          <span className="header__optionLineTwo"> & Orders</span>
+        </div>
+        <div className="header__option">
+          <span className="header__optionLineOne">Your</span>
+          <span className="header__optionLineTwo">Prime</span>
+          <span className="header__optionLineTwo">22997654340</span>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
