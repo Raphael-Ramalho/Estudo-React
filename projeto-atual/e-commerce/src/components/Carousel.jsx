@@ -7,9 +7,6 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 function Carousel({slideImages, currentImage, handleImage}) {
-  // const [currentImage, setCurrentImage] = useState(0);
-
-  // const slideImages = [slide1, slide2, slide3, slide4, slide5];
 
   const nextImage = () => {
     if (currentImage + 1 === slideImages.length) {
