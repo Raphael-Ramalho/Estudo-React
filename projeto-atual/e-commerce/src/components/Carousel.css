@@ -1,0 +1,19 @@
+.button{
+  width: 100px;
+  height: 100%;
+}
+.button:hover{
+  background-color: 'red';
+}
+
+.container{
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon{
+  color:black;
+  width: 50px !important;
+  height: auto !important;
+}
