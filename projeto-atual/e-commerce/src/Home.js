@@ -1,9 +1,10 @@
 import React from "react";
+import "./Home.css"
 
 function Home(){
   return(
-    <div>
-
+    <div className="home">
+        <p>I am the home component</p>
     </div>
   )
 }
