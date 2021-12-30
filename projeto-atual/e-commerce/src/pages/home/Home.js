@@ -39,12 +39,14 @@ function Home() {
   };
 
   return (
-    <div className="home">
+    <div
+      className="home"
+      style={{
+        backgroundImage: `url(${slideImages[currentImage]})`,
+      }}
+    >
       <div
         className="home__container"
-        style={{
-          backgroundImage: `url(${slideImages[currentImage]})`,
-        }}
       >
         <div className="container">
           <Button
@@ -60,18 +62,15 @@ function Home() {
           </Button>
         </div>
         <div className="home__row">
-          <Product/>
-          <Product/>
+          <Product />
+          <Product />
         </div>
         <div className="home__row">
           {/* Product */}
           {/* Product */}
           {/* Product */}
         </div>
-        <div className="home__row">
-          {/* Product */}
-        </div>
-
+        <div className="home__row">{/* Product */}</div>
       </div>
     </div>
   );
