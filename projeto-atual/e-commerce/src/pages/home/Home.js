@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Button } from "@mui/material";
 import "./Home.css";
-
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import Product from "../../components/product/Product";
 
 //Caurousel images
 import slide1 from "../../assets/img/carousel/61ASx7NHTWL._SX3000_.jpg";
@@ -12,7 +12,6 @@ import slide3 from "../../assets/img/carousel/61DUO0NqyyL._SX3000_.jpg";
 import slide4 from "../../assets/img/carousel/71G7vKHnFZL._SX3000_.jpg";
 import slide5 from "../../assets/img/carousel/711Y9Al9RNL._SX3000_.jpg";
 
-import Product from "../../components/product/Product";
 
 function Home() {
   const [currentImage, setCurrentImage] = useState(0);
