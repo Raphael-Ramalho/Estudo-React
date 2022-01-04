@@ -19,9 +19,17 @@
 .home{
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home__row{
+  display: flex;
+  z-index: 1;
+  margin: 0 5px;
 }
 
 .home__container{
-  background-image: linear-gradient(0deg, rgb(255, 255, 255),  rgba(255,0,0,0) 40%);
+  background-image: linear-gradient(0deg, rgb(255, 255, 255),  rgba(255,0,0,0));
 }
+
