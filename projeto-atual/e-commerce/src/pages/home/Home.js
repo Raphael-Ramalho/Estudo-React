@@ -40,7 +40,7 @@ function Home() {
     <div
       className="home"
       style={{
-        backgroundImage: `linear-gradient(0deg, rgb(204, 204, 204),  rgba(255,0,0,0) 40%), url(${slideImages[currentImage]})`,
+        backgroundImage: `linear-gradient(0deg, rgb(234,237,237),  rgba(255,0,0,0) 40%), url(${slideImages[currentImage]})`,
       }}
     >
       <div className="home__container">
