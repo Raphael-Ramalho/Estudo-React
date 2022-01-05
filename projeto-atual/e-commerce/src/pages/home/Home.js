@@ -4,6 +4,7 @@ import "./Home.css";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Product from "../../components/product/Product";
+import Kindle from '../../assets/img/kindle.jpg'
 
 //Caurousel images
 import slide1 from "../../assets/img/carousel/61ASx7NHTWL._SX3000_.jpg";
@@ -58,16 +59,16 @@ function Home() {
           </Button>
         </div>
         <div className="home__row">
-          <Product />
-          <Product />
+          <Product title='kindle' price={1200} image={Kindle} rating={5}/>
+          {/* <Product /> */}
         </div>
         <div className="home__row">
+          {/* <Product />
           <Product />
-          <Product />
-          <Product />
+          <Product /> */}
         </div>
         <div className="home__row">
-          <Product />
+          {/* <Product /> */}
         </div>
       </div>
     </div>

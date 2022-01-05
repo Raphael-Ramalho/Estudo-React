@@ -1,21 +1,20 @@
 import React from "react";
 import "./Product.css";
-import KindleIMG from "../../assets/img/kindle.jpg";
 
-function Product() {
+function Product({title, image, price, rating}) {
   return (
     <div className="product">
       <div className="product__info">
-        <p> The lean startup</p>
+        <p>{title}</p>
         <p className="product__price">
           <small>$</small>
-          <strong>19.99</strong>
+          <strong>{price}</strong>
         </p>
         <div className="product__rating">
           <p> &#11088;</p>
         </div>
       </div>
-        <img src={KindleIMG} alt="kindle img" />
+        <img src={image} alt="kindle img" />
         <button>Add to Basket</button>
     </div>
   );
