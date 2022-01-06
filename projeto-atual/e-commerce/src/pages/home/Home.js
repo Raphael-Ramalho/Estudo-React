@@ -60,15 +60,15 @@ function Home() {
         </div>
         <div className="home__row">
           <Product title='kindle' price={1200} image={Kindle} rating={3}/>
-          {/* <Product /> */}
-        </div>
-        <div className="home__row">
-          {/* <Product />
           <Product />
-          <Product /> */}
         </div>
         <div className="home__row">
-          {/* <Product /> */}
+          <Product />
+          <Product />
+          <Product />
+        </div>
+        <div className="home__row">
+          <Product />
         </div>
       </div>
     </div>
