@@ -1,7 +1,8 @@
 import React from "react";
 import "./Product.css";
 
-function Product({title, image, price, rating}) {
+function Product({ title, image, price, rating }) {
+
   return (
     <div className="product">
       <div className="product__info">
@@ -11,11 +12,15 @@ function Product({title, image, price, rating}) {
           <strong>{price}</strong>
         </p>
         <div className="product__rating">
-          <p> &#11088;</p>
+          {Array(rating)
+            .fill()
+            .map((_, i) => (
+              <p>🌟</p>
+            ))}
         </div>
       </div>
-        <img src={image} alt="kindle img" />
-        <button>Add to Basket</button>
+      <img src={image} alt="kindle img" />
+      <button>Add to Basket</button>
     </div>
   );
 }
