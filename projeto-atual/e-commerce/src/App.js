@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 import Home from "./pages/home/Home";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -10,14 +10,10 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/checkout">
-            <h1>i am a checkout</h1>
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/checkout" element={<h1>i am a checkout</h1>}/>
+        </Routes>
       </div>
     </BrowserRouter>
   );
