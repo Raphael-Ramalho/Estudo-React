@@ -5,6 +5,11 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Product from "../../components/product/Product";
 import Kindle from '../../assets/img/kindle.jpg'
+import XBox from '../../assets/img/xbox.jpg'
+import drillingMachine from '../../assets/img/drilling_machine.jpg'
+import echoShow from '../../assets/img/echo_show.jpg'
+import fireTv from '../../assets/img/fire_tv_stick.jpg'
+import echo from '../../assets/img/echo.jpg'
 
 //Caurousel images
 import slide1 from "../../assets/img/carousel/61ASx7NHTWL._SX3000_.jpg";
@@ -59,16 +64,16 @@ function Home() {
           </Button>
         </div>
         <div className="home__row">
-          <Product title='kindle' price={1200} image={Kindle} rating={3}/>
-          <Product />
+          <Product title='Drilling Machine' price={600} image={drillingMachine} rating={4}/>
+          <Product title='XBox' price={3000} image={XBox} rating={5}/>
         </div>
         <div className="home__row">
-          <Product />
-          <Product />
-          <Product />
+          <Product title='Echo Show' price={400} image={echoShow} rating={4}/>
+          <Product title='Fire TV Stick' price={50} image={fireTv} rating={5}/>
+          <Product title='Kindle' price={1200} image={Kindle} rating={3}/>
         </div>
         <div className="home__row">
-          <Product />
+          <Product title='Echo' price={200} image={echo} rating={4}/>
         </div>
       </div>
     </div>
