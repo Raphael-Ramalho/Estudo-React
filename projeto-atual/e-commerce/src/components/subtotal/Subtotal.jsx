@@ -1,5 +1,5 @@
 import React from "react";
-import "./subtotal.css";
+import "./Subtotal.css";
 import CurrencyFormat from "react-currency-format";
 
 function Subtotal() {
