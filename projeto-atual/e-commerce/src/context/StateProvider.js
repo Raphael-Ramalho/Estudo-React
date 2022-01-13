@@ -1,6 +1,6 @@
 import React,{createContext, useContext, useReducer} from 'react';
 
-//prepare the data
+//prepare the data center
 export const StateContext = createContext()
 
 export const StateProvider = ({reducer, initialState, children}) => (
