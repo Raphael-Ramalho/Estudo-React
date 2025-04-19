@@ -7,8 +7,7 @@ import {
   IconGearshape,
 } from "@apple/react-sf-symbols";
 import Text from "./components/Text";
-
-const name = "Raphael de Souza Ramalho Victor Ferreira";
+import { data } from "../../database/database";
 
 const Main = ({
   setIsMain,
@@ -24,7 +23,7 @@ const Main = ({
     >
       <div className="p-4 flex align-middle flex-col h-full justify-center">
         <span className="text-white text-center font-bold text-sm">
-          {name.toUpperCase()}
+          {data.name.toUpperCase()}
         </span>
         <div className="py-12 px-2 gap-[14rem] flex flex-col">
           <div className="flex justify-around">

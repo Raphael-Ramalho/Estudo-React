@@ -25,4 +25,5 @@ const raphaelData: Data = {
   endDate: "15/08/2028",
 };
 
-export const data = true ? leticiaData : raphaelData;
+export const data =
+  process.env.REACT_APP_UNI_PERSON === "raphael" ? raphaelData : leticiaData;
