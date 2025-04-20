@@ -29,7 +29,7 @@ const Card = ({
       </div>
 
       {/* Card */}
-      <div className="shadow-2xl border-solid border-gray-400 border-[0.1rem] my-6 flex-grow w-[30rem] rounded-xl p-4 flex flex-col">
+      <div className="shadow-2xl border-solid border-gray-400 border-[0.1rem] my-9 flex-grow w-[30rem] rounded-xl p-4 flex flex-col">
         <div className="flex items-center mt-[-1.2rem] w-full">
           <img src={image} alt="" height={50} width={100} />
           <span className="font-bold text-[0.75rem] text-blue-900 pl-[0.2rem]">

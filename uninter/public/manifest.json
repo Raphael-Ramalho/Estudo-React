@@ -1,6 +1,6 @@
 {
-  "short_name": "uni",
-  "name": "uninter-l",
+  "short_name": "uninter",
+  "name": "uninter-r",
   "icons": [
     {
       "src": "./thumb.png",
